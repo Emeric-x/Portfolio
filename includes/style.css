@@ -1,0 +1,1456 @@
+/************************/
+
+
+/***** TOUTES PAGES *****/
+
+
+/************************/
+
+body {
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: .5s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    height: 580px;
+    overflow-x: hidden;
+    /* cacher la scrollbar horizontale */
+    -ms-overflow-style: none;
+    /* cacher la scrollbar sur IE et Edge */
+    scrollbar-width: none;
+    /* cacher la scrollbar sur Firefox */
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    /*margin-top: 80px;*/
+    /* vertical-align: middle; */
+    margin-top: 5%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+::-webkit-scrollbar {
+    /*cacher la scrollbar sur Chrome, Safari et Opera */
+    display: none;
+}
+
+header {
+    width: auto;
+    height: auto;
+    float: left;
+    position: fixed;
+}
+
+
+/* icon menu pour basses résolutions */
+
+.menuIcon {
+    visibility: hidden;
+}
+
+nav {
+    width: auto;
+    background-color: white;
+    /* rgb(43,43,43) */
+    padding: 20px;
+    border-radius: 20px;
+    margin: -19px;
+    height: 580px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: .5;
+    }
+}
+
+
+/* ici, possibilité d'utiliser nth-child etc mais je mets des id pour pouvoir agir sur eux en php dans navBar.php */
+
+#fade1 {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+#fade2 {
+    animation: 1.2s ease-out 0s 1 slideInFromLeft;
+}
+
+#fade3 {
+    animation: 1.4s ease-out 0s 1 slideInFromLeft;
+}
+
+#fade4 {
+    animation: 1.6s ease-out 0s 1 slideInFromLeft;
+}
+
+#fade5 {
+    animation: 1.8s ease-out 0s 1 slideInFromLeft;
+}
+
+#fade6 {
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+.nav-item {
+    list-style-type: none;
+    margin-left: -30px;
+}
+
+.nav-link svg {
+    margin-right: 10px;
+}
+
+.fermeMenu {
+    visibility: hidden;
+    position: absolute;
+}
+
+.nav-item a.active {
+    background-color: rgb(63, 63, 209);
+    border: 2px solid blue;
+    border-radius: 2px;
+    color: white;
+}
+
+.nav-item a:hover:not(.active) {
+    background-color: transparent;
+}
+
+.nav-item a {
+    color: black;
+    /* white */
+    font-size: 13px;
+    border: 1px solid white;
+    /* rgb(43,43,43) */
+}
+
+.nav-item a:hover {
+    color: blue;
+    border: 1px solid blue;
+    border-radius: 2px;
+    transition: .5s;
+    /* .5s = 0.5s (jcrois) */
+}
+
+.nav-item a.active:hover {
+    background-color: rgb(63, 63, 209);
+    border: 2px solid blue;
+    border-radius: 5px;
+    color: black;
+}
+
+section {
+    width: auto;
+    height: auto;
+    margin-left: 200px;
+}
+
+section h2 {
+    color: rgb(33, 33, 189);
+    font-size: 20px;
+}
+
+.caractereh2 {
+    color: gray;
+}
+
+button {
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    border: 2px solid blue;
+}
+
+button:hover {
+    color: black;
+    background-color: blue;
+    border-radius: 5px;
+    border: 2px solid blue;
+    transition: .5s;
+}
+
+@media only screen and (max-width: 620px) {
+    /* Pour mobile */
+    .container {
+        margin-top: 0;
+        line-height: 50px;
+        vertical-align: middle;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    nav {
+        height: 100%;
+        width: 1px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        text-align: center;
+        visibility: hidden;
+    }
+    .fermeMenu {
+        visibility: visible;
+        position: absolute;
+        top: 50px;
+        right: 25px;
+        margin-left: 50px;
+        transition: .5s;
+    }
+    .nav-item {
+        padding: 8px 8px 8px 32px;
+        transition: 0.3s;
+    }
+    .menuIcon {
+        visibility: visible;
+        transition: .5s;
+        position: relative;
+        margin-top: 10px;
+        left: 50%;
+    }
+    section {
+        margin-left: 0;
+    }
+}
+
+
+/**********************/
+
+
+/***** PAGE INDEX *****/
+
+
+/**********************/
+
+
+/* SECTION */
+
+#sectionAccueil {
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+#sous-titre {
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: .2rem;
+}
+
+#img-Emeric {
+    border-radius: 50px;
+}
+
+#liste-RS {
+    list-style-type: none;
+}
+
+#liste-RS li {
+    display: inline-block;
+}
+
+#hr {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: blue;
+}
+
+
+/* FOOTER */
+
+#footerAccueil {
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+
+/**********************/
+
+
+/***** PAGE MOI *******/
+
+
+/**********************/
+
+
+/* ARTICLE MOI*/
+
+@media only screen and (max-width: 767.5px) {
+    #articleMoi {
+        clear: left;
+        min-width: 100%;
+        margin-bottom: 50px;
+    }
+}
+
+#articleMoi {
+    width: 60%;
+    height: auto;
+    float: left;
+    text-align: justify;
+}
+
+
+/*
+#scrollEffect{
+    position: fixed;
+    margin-left: 500px;
+}
+#mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+#scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #000;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+}
+@keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+}
+*/
+
+
+/* ASIDE MOI*/
+
+@media only screen and (max-width: 620px) {
+    #canvas1 {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+#asideMoi {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#canvas1 {
+    border: 2px solid black;
+    width: 245px;
+    height: 314px;
+}
+
+
+/* ARTICLE COMPETENCE TECHNIQUE */
+
+#articleCT {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    margin-right: 50px;
+    float: left;
+}
+
+
+/* DIV JS */
+
+#cwJS {
+    font-family: consolas;
+    width: 400px;
+    /*background: rgb(31, 31, 31);*/
+    background-image: linear-gradient(90deg, rgb(31, 31, 31) 95%, white, white, white, white);
+    overflow-y: hidden;
+    position: relative;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+#cwJS .main {
+    padding: 10px;
+    margin-left: 15px;
+}
+
+#cwJS .typ {
+    border-right: 2px solid white;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#cwJS .tab {
+    padding: 0 0 0 4ch;
+}
+
+#cwJS .tab2 {
+    padding: 0 0 0 8ch;
+}
+
+#cwJS .car {
+    color: white;
+}
+
+#cwJS .string {
+    color: rgba(193, 117, 77, 255);
+}
+
+#cwJS .class {
+    color: #ffce55;
+}
+
+#cwJS #typ1,
+#cwJS #typ2,
+#cwJS #typ3 {
+    color: rgba(62, 131, 201, 255);
+}
+
+#cwJS #typ5 {
+    color: #008812;
+}
+
+#cwJS #typ4,
+.name {
+    color: rgba(115, 192, 238, 255);
+}
+
+#cwJS .decla {
+    color: rgba(206, 189, 116, 255);
+}
+
+#cwJS #typ1::before {
+    content: "1";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+}
+
+#cwJS #typ2::before {
+    content: "2";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+}
+
+#cwJS #typ3::before {
+    content: "3";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+}
+
+#cwJS #typ4::before {
+    content: "4";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+}
+
+#cwJS #typ5::before {
+    content: "5";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+}
+
+#cwJS #typ6::before {
+    content: "6";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+}
+
+
+/* DIV HTML */
+
+#cwHTML {
+    font-family: consolas;
+    width: 400px;
+    /*background: rgb(31, 31, 31);*/
+    background-image: linear-gradient(90deg, rgb(31, 31, 31) 95%, white, white, white, white);
+    overflow-y: hidden;
+    position: relative;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+#cwHTML .main {
+    padding: 10px;
+    margin-left: 15px;
+}
+
+#cwHTML .typ {
+    border-right: 2px solid white;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#cwHTML .tab {
+    padding: 0 0 0 4ch;
+}
+
+#cwHTML .tab2 {
+    padding: 0 0 0 8ch;
+}
+
+#cwHTML .ecrit {
+    color: white;
+}
+
+#cwHTML .function {
+    color: rgba(112, 190, 239, 255);
+}
+
+#cwHTML .car {
+    color: rgba(96, 109, 119, 255);
+}
+
+#cwHTML .string {
+    color: rgba(193, 117, 77, 255);
+}
+
+#cwHTML .blueht {
+    color: rgba(39, 95, 166, 255);
+}
+
+#cwHTML #typ1,
+#cwHTML #typ2,
+#cwHTML #typ3 {
+    color: rgba(62, 131, 201, 255);
+}
+
+#cwHTML #typ5 {
+    color: #008812;
+}
+
+#cwHTML #typ4,
+.name {
+    color: rgba(115, 192, 238, 255);
+}
+
+#cwHTML #typ1::before {
+    content: "1";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+}
+
+#cwHTML #typ2::before {
+    content: "2";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+}
+
+#cwHTML #typ3::before {
+    content: "3";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+}
+
+#cwHTML #typ4::before {
+    content: "4";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+}
+
+#cwHTML #typ5::before {
+    content: "5";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+}
+
+#cwHTML #typ6::before {
+    content: "6";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+}
+
+
+/* DIV PHP */
+
+#cwPHP {
+    font-family: consolas;
+    width: 400px;
+    /*background: rgb(31, 31, 31);*/
+    background-image: linear-gradient(90deg, rgb(43, 43, 43) 95%, white, white, white, white);
+    overflow-y: hidden;
+    position: relative;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+#cwPHP .main {
+    padding: 10px;
+    margin-left: 15px;
+}
+
+#cwPHP .typ {
+    border-right: 2px solid white;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#cwPHP .tab {
+    padding: 0 0 0 4ch;
+}
+
+#cwPHP .tab2 {
+    padding: 0 0 0 8ch;
+}
+
+#cwPHP .car {
+    color: white;
+}
+
+#cwPHP .vert {
+    color: rgba(73, 175, 119, 255);
+}
+
+#cwPHP .bleuClair {
+    color: rgba(121, 197, 236, 255);
+}
+
+#cwPHP .bleuFonce {
+    color: rgba(31, 72, 146, 255);
+}
+
+#cwPHP .string {
+    color: rgba(193, 117, 77, 255);
+}
+
+#cwPHP .class {
+    color: rgba(208, 215, 158, 255);
+}
+
+#cwPHP #typ1,
+#cwPHP #typ2,
+#cwPHP #typ3 {
+    color: rgba(62, 131, 201, 255);
+}
+
+#cwPHP #typ5 {
+    color: #008812;
+}
+
+#cwPHP #typ4,
+.name {
+    color: rgba(115, 192, 238, 255);
+}
+
+#cwPHP .violet {
+    color: rgba(177, 126, 173, 255);
+}
+
+#cwPHP #typ1,
+#cwPHP #typ1 span {
+    animation: typ1 3.2s steps(30), curs .4s infinite alternate-reverse;
+}
+
+@keyframes typ1 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 30ch;
+    }
+}
+
+#cwPHP #typ1::before {
+    content: "1";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+    animation: numb 3.4;
+}
+
+#cwPHP #typ2,
+#cwPHP #typ2 span {
+    animation: typ2 4.6s steps(43) 4s, curs .4s infinite alternate-reverse, display 4s;
+}
+
+@keyframes typ2 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 43ch;
+    }
+}
+
+#cwPHP #typ2::before {
+    content: "2";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+    animation: display 4s, numb 4.8s 4s;
+}
+
+#cwPHP #typ3,
+#cwPHP #typ3 span {
+    animation: typ3 4s steps(37) 9s, curs .4s infinite alternate-reverse, display 9s;
+}
+
+@keyframes typ3 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 37ch;
+    }
+}
+
+#cwPHP #typ3::before {
+    content: "3";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+    animation: display 9s, numb 4.2s 9s;
+}
+
+#cwPHP #typ4,
+#cwPHP #typ4 span {
+    animation: typ4 2.8s steps(25) 13.5s, curs .4s infinite alternate-reverse, display 13.5s;
+}
+
+@keyframes typ4 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 25ch;
+    }
+}
+
+#cwPHP #typ4::before {
+    content: "4";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+    animation: display 13.5s, numb 3s 13.5s;
+}
+
+#cwPHP #typ5,
+#cwPHP #typ5 span {
+    animation: typ4 2.4s steps(21) 17s, curs .4s infinite alternate-reverse, display 17s;
+}
+
+@keyframes typ4 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 21ch;
+    }
+}
+
+#cwPHP #typ5::before {
+    content: "5";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+    animation: display 17s, numb 2.6s 17s;
+}
+
+#cwPHP #typ6,
+#cwPHP #typ6 span {
+    width: 1ch;
+    animation: fin .1s steps(1) 19.5s, curs .4s infinite alternate-reverse, display 19.5s;
+}
+
+#cwPHP #typ6::before {
+    content: "6";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+    animation: display 19.5s, numb .3s infinite 19.5s;
+}
+
+@keyframes fin {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 1ch;
+    }
+}
+
+@keyframes display {
+    0% {
+        color: transparent;
+        border: none;
+    }
+    100% {
+        color: transparent;
+        border: none;
+    }
+}
+
+@keyframes curs {
+    0% {
+        border-color: transparent;
+    }
+}
+
+@keyframes numb {
+    0% {
+        color: white;
+    }
+    100% {
+        color: white;
+    }
+}
+
+
+/* DIV SQL */
+
+#cwSQL {
+    font-family: consolas;
+    width: 400px;
+    /*background: rgb(31, 31, 31);*/
+    background-image: linear-gradient(90deg, rgb(31, 31, 31) 95%, white, white, white, white);
+    overflow-y: hidden;
+    position: relative;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+#cwSQL .main {
+    padding: 10px;
+    margin-left: 15px;
+}
+
+#cwSQL .typ {
+    border-right: 2px solid white;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#cwSQL .tab {
+    padding: 0 0 0 4ch;
+}
+
+#cwSQL .blanc {
+    color: white;
+}
+
+#cwSQL .bleu {
+    color: rgba(72, 137, 205, 255);
+}
+
+#cwSQL .jaune {
+    color: rgba(197, 122, 74, 255);
+}
+
+#cwSQL #typ1::before {
+    content: "1";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+}
+
+#cwSQL #typ2::before {
+    content: "2";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+}
+
+#cwSQL #typ3::before {
+    content: "3";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+}
+
+#cwSQL #typ4::before {
+    content: "4";
+    color: #97baaf;
+    position: absolute;
+    left: 1ch;
+}
+
+
+/* DIV CSS */
+
+
+/* DIV C# */
+
+
+/* ASIDE COMPETENCE TECHNIQUE */
+
+@media only screen and (max-width: 767.5px) {
+    #asideCT {
+        clear: both;
+    }
+}
+
+#asideCT {
+    width: auto;
+    height: auto;
+    margin-bottom: 150px;
+}
+
+#asideCT ul {
+    list-style: none;
+}
+
+#asideCT li {
+    float: left;
+    margin: 5px;
+}
+
+#asideCT button {
+    background-color: transparent;
+    border: none;
+}
+
+
+/* ARTICLE COMPETENCE PROFESSIONNELLES */
+
+#articlePRO {
+    width: auto;
+    height: 200px;
+    position: relative;
+}
+
+#rotation {
+    margin-top: 180px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    position: absolute;
+    animation: circle 6s linear infinite;
+}
+
+.un {
+    animation-delay: 1.5s;
+}
+
+.deux {
+    animation-delay: 2s;
+}
+
+.trois {
+    animation-delay: 2.5s;
+}
+
+.quatre {
+    animation-delay: 3s;
+}
+
+.cinq {
+    animation-delay: 3.5s;
+}
+
+.six {
+    animation-delay: 4s;
+}
+
+.sept {
+    animation-delay: 4.5s;
+}
+
+.huit {
+    animation-delay: 5s;
+}
+
+.neuf {
+    animation-delay: 5.5s;
+}
+
+.dix {
+    animation-delay: 6s;
+}
+
+.onze {
+    animation-delay: 6.5s;
+}
+
+.douze {
+    animation-delay: 7s;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg) translate(-165px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translate(-165px) rotate(-360deg);
+    }
+}
+
+
+/**********************/
+
+
+/**** PAGE CONTACT ****/
+
+
+/**********************/
+
+form input,
+textarea {
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+.form-control {
+    border-left: transparent;
+    border-right: transparent;
+    border-top: transparent;
+}
+
+.form-control:focus {
+    border-color: blue;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 60, 255, 0.6);
+}
+
+input:focus,
+textarea:focus {
+    /* focus = css quand on clique sur l'input concerné */
+    border: 1px solid blue;
+    /* ne fonctionne pas car deja css bootstrap */
+}
+
+
+/**********************/
+
+
+/**** PAGE PROJETS ****/
+
+
+/**********************/
+
+
+/* ARTICLE PROJETS PERSO */
+
+#slider {
+    width: 800px;
+    height: 300px;
+    background-color: white;
+    position: relative;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.btnNonActif {
+    border-radius: 50%;
+    border: none;
+    height: 12px;
+    background-color: blue;
+}
+
+.btnActif {
+    border-radius: 50%;
+    border: none;
+    height: 20px;
+    background-color: blue;
+    transition: .5s;
+}
+
+
+/* pour éviter que les effets hover appliqués sur les autres boutons ne s'appliquent sur eux également */
+
+.btnNonActif:hover {
+    border-radius: 50%;
+    border: none;
+    height: 12px;
+    background-color: blue;
+}
+
+
+/* pour éviter que les effets hover appliqués sur les autres boutons ne s'appliquent sur eux également */
+
+.btnActif:hover {
+    border-radius: 50%;
+    border: none;
+    height: 20px;
+    background-color: blue;
+    transition: .5s;
+}
+
+#slider ul {
+    list-style-type: none;
+    margin-left: 300px;
+    margin-top: 90px;
+}
+
+#slider li {
+    display: inline-block;
+}
+
+#slider img {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    margin-left: -150px;
+    transition: 1s;
+    box-shadow: rgb(50, 50, 93) 0px 50px 100px -20px, rgb(0, 0, 0) 0px 30px 60px -30px, rgb(10, 37, 64) 0px -2px 6px 0px inset;
+}
+
+.textProjet {
+    margin-left: 200px;
+    margin-top: -200px;
+    text-align: justify;
+    width: auto;
+    height: 150px;
+    transition: 1s;
+}
+
+.textProjet h1 {
+    color: blue;
+}
+
+.voirProjet {
+    position: absolute;
+    margin-left: 660px;
+    margin-top: 80px;
+    border-radius: 5px;
+    background-color: blue;
+    border: none;
+}
+
+.voirProjet:hover {
+    border: none;
+    transition: .5s;
+}
+
+@media only screen and (max-width: 1399px) {
+    #slider {
+        margin-top: 70px;
+        transition: 1s;
+        width: auto;
+        height: auto;
+        margin-right: 20px;
+    }
+    #slider img {
+        margin-top: -120px;
+        margin-left: 200px;
+        transition: 1s;
+    }
+    .textProjet {
+        margin-left: 0;
+        margin-top: 0;
+        transition: 1s;
+        height: auto;
+    }
+    #slider ul {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .voirProjet {
+        transition: 1s;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        position: relative;
+    }
+    .slideshow-container {
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 767.5px) {
+    #slider img {
+        margin-left: 50px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    #slider img {
+        margin-left: 0;
+    }
+}
+
+
+/* ARTICLE PROJETS ÉDUCATIFS */
+
+#ProjetsEdu * {
+    box-sizing: border-box;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: black;
+    border-radius: 5px;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+#timeline .contain {
+    padding: 10px 40px;
+    position: relative;
+    background-color: transparent;
+    width: 50%;
+    height: auto;
+    margin-right: 540px;
+}
+
+
+/* les petits ronds sur la timeline */
+
+#timeline .contain::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: white;
+    border: 4px solid blue;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+/* contenu à gauche */
+
+.left {
+    left: 0;
+}
+
+
+/* contenu à droite */
+
+.right {
+    left: 50%;
+}
+
+
+/* flèches gauche (pointe à droite) */
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent blue;
+}
+
+
+/* flèches droite (pointe à gauche) */
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent blue transparent transparent;
+}
+
+.right::after {
+    left: -13px;
+}
+
+.content {
+    color: black;
+    padding: 15px;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    position: relative;
+    border-radius: 6px;
+    height: auto;
+}
+
+
+/* pour responsive */
+
+@media screen and (max-width: 600px) {
+    /* placer la timeline à gauche */
+    .timeline::after {
+        left: 31px;
+    }
+    /* Full-width containers */
+    #timeline .contain {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    /* toutes les flèches pointent du même côté */
+    #timeline .contain::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+    /* ronds au meme endroit */
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+    .right {
+        left: 0%;
+    }
+}
+
+
+/* fenêtre modale pour les projets */
+
+
+/* Décrire l'animation */
+
+@keyframes slideDownFadeIN {
+    from {
+        top: -100px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+
+/* Foncer l'arrière-plan de la fenêtre modale */
+
+.modal {
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Afficher la fenêtre modale lorsqu'elle est ciblée par un lien supprimé */
+
+#btn_modale {
+    text-align: right;
+}
+
+.modal:target {
+    display: table;
+    position: absolute;
+}
+
+
+/* la fenêtre modale  */
+
+.modal-dialog {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/* Le contenu de la modale */
+
+.modal-dialog .modal-content {
+    margin: auto;
+    background-color: #f3f3f3;
+    position: relative;
+    padding: 20px;
+    outline: 0;
+    border: 1px #777 solid;
+    text-align: justify;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: slideDownFadeIN;
+    animation-duration: 0.5s;
+}
+
+
+/* Bouton servant à fermer la fenêtre modale */
+
+.closebtn {
+    text-decoration: none;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.closebtn:hover,
+.closebtn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/***************************/
+
+
+/**** PAGE RUBIK'S CUBE ****/
+
+
+/***************************/
+
+.sectionRB img {
+    width: 350px;
+    height: 320px;
+}
+
+
+/**********************/
+
+
+/**** PAGE STAGES ****/
+
+
+/**********************/
+
+#sectionStages p {
+    text-align: justify;
+}
